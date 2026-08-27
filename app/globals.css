@@ -1,0 +1,8 @@
+:root{
+    --color-gold-gradient: linear-gradient(150deg, #F6D680 0%, #E0AC2A 48%, #B77F12 100%);
+    --color-gold-solid:    #C8901A;
+    --color-gold-light:    #F6D680; 
+    --color-gold-deep:     #8A6210; 
+    --color-gold-on-ink:   #E0AC2A; 
+    --color-link:          #A9761A;
+}
