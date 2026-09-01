@@ -1,8 +1,46 @@
-:root{
-    --color-gold-gradient: linear-gradient(150deg, #F6D680 0%, #E0AC2A 48%, #B77F12 100%);
-    --color-gold-solid:    #C8901A;
-    --color-gold-light:    #F6D680; 
-    --color-gold-deep:     #8A6210; 
-    --color-gold-on-ink:   #E0AC2A; 
-    --color-link:          #A9761A;
+@import "tailwindcss";
+
+@theme {
+  /* Fundo e superfícies */
+  --color-cream: #F7F4EE;
+  --color-ink: #14181B;
+
+  /* Dourado */
+  --color-gold-light: #F6D680;
+  --color-gold: #C8901A;
+  --color-gold-mid: #E0AC2A;
+  --color-gold-dark: #B77F12;
+  --color-gold-deep: #8A6210;
+
+  /* Bordas */
+  --color-border-light: #E2DACB;
+  --color-border: #E7E0D3;
+  --color-border-strong: #D6CDBC;
+
+  /* Textos secundários / cinzas */
+  --color-muted: #55595D;
+  --color-muted-light: #6E7377;
+  --color-muted-lighter: #8A8F93;
+  --color-muted-faint: #8E9397;
+
+  /* Fundos alternativos */
+  --color-surface-soft: #EFEAE0;
+  --color-surface-panel: #F1EDE4;
+
+  /* Verde institucional */
+  --color-forest: #1B3A31;
+  --color-success: #1B7A4B;
+
+  /* Fontes */
+  --font-sans: var(--font-archivo), Helvetica, sans-serif;
+  --font-serif: var(--font-source-serif), Georgia, serif;
+  --font-mono: var(--font-plex-mono), monospace;
+
+  /* Layout */
+  --breakpoint-content: 1240px;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
 }
