@@ -15,10 +15,6 @@
 - [ ] Coluna única de texto serif com foto ao lado (max-width 62ch)
 - [ ] Bloco de linha do tempo (história da ACSL)
 
-### Dia 9 (Quinta) — Sobre Nós (equipe + revisão)
-- [ ] Seção de equipe (fotos + nome + cargo)
-- [ ] Revisar tipografia e espaçamento da página inteira contra os tokens
-
 ## Semana 3 — Funcionalidade, navegação, responsividade e deploy
 
 ### Dia 11 (Segunda) — Contato funcional
