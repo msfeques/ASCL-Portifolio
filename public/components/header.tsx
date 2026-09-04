@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import Button from "./button";
 
 export default function Header() {
   const pathname = usePathname();
@@ -17,10 +18,8 @@ export default function Header() {
     <header>
       {/* Barra superior escura */}
       <div className="bg-ink text-white text-[11px] font-mono tracking-widest">
-        <div className="max-w-[1240px] mx-auto flex justify-between items-center px-10 py-2">
-          <span className="uppercase">
-            Editoração eletrônica desde 2005
-          </span>
+        <div className="max-w-310 mx-auto flex justify-between items-center px-10 py-2">
+          <span className="uppercase">ACSL EDITORAÇÃO ELETRÔNICA E REVISTA BRASIL EM FOCO LEVANDO INFORMAÇÃO DESDE DE 2006</span>
 
           <a
             href="mailto:contato@acsleditora.com.br"
@@ -33,15 +32,15 @@ export default function Header() {
 
       {/* Barra de navegação principal */}
       <nav className="bg-white border-b border-border">
-        <div className="max-w-[1240px] mx-auto flex items-center justify-between px-10 py-4">
-          <Link href="/">
+        <div className="max-w-310 mx-auto flex items-center justify-between px-10 py-4">
+          <Link href="/" className="relative block h-10 w-[140px]">
             <Image
               src="/assets/logo-acsl.png"
               alt="ACSL Editora"
-              width={140}
-              height={40}
+              fill
               priority
-              className="h-10 w-auto"
+              sizes="140px"
+              className="object-contain"
             />
           </Link>
 
@@ -64,9 +63,9 @@ export default function Header() {
             })}
           </div>
 
-          <button className="bg-gold hover:bg-gold-dark text-ink font-semibold text-sm px-6 py-2.5 rounded transition-colors">
-            Publicar
-          </button>
+          <Button href="/contact#formulario-contato" variant="primary">
+            Publique
+          </Button>
         </div>
       </nav>
     </header>

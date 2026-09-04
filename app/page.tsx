@@ -1,5 +1,6 @@
 import { Footer } from "@/public/components/footer";
 import Header from "@/public/components/header";
+import AcervoGrid from "@/public/components/acervoGrid";
 
 export default function Home() {
   return (
@@ -7,7 +8,9 @@ export default function Home() {
       <main>
        <Header />
         <div className="bg-cream min-h-screen flex flex-col">
-          <main className="flex-1">{/* header e conteúdo */}</main>
+          <main className="flex-1">
+            <AcervoGrid />
+          </main>
           <Footer/>
         </div>
       </main>

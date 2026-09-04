@@ -1,3 +1,7 @@
 export default function Hero() {
-    return ()
+    return (
+        <div>
+            
+        </div>
+    )
 }
