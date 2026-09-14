@@ -63,7 +63,7 @@ export default function AcervoGrid() {
   const colapsado = needsCollapse && !expanded;
 
   return (
-    <section className="w-full px-4 py-16">
+    <section className="w-full px-4 py-16" id="acervo">
       <div className="max-w-310 mx-auto">
         <div className="relative">
           <div
