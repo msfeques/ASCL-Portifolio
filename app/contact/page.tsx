@@ -1,5 +1,3 @@
-import { Footer } from "@/public/components/footer";
-import Header from "@/public/components/header";
 import Publish from "@/public/components/publish";
 import Image from "next/image";
 
@@ -7,7 +5,6 @@ export default function Contact() {
   return (
     <div className="bg-cream min-h-screen">
       <main className="flex-1">
-        <Header />
         <div className="bg-cream min-h-screen flex flex-col">
           <main className="flex-1 flex flex-col lg:flex-row items-stretch">
             {/* Imagem — full bleed à esquerda, sem padding */}
@@ -34,7 +31,6 @@ export default function Contact() {
               <Publish />
             </div>
           </main>
-          <Footer />
         </div>
       </main>
     </div>

@@ -1,8 +1,9 @@
 import Image from "next/image";
+import VisitCounter from "./visitCounter";
 
 export function Footer() {
   return (
-    <footer className="bg-ink text-[#C9CDD0] mt-18">
+    <footer className="bg-ink text-[#C9CDD0]">
       <div className="max-w-[1240px] mx-auto grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr] gap-10 px-11 py-14">
         {/* Coluna 1: logo + descrição */}
         <div className="grid gap-3.5 content-start">
@@ -24,10 +25,18 @@ export function Footer() {
           <div className="font-mono text-[11px] tracking-widest uppercase text-gold-mid">
             Navegação
           </div>
-          <a href="#" className="hover:text-white transition-colors">Início</a>
-          <a href="/about-us" className="hover:text-white transition-colors">Sobre nós</a>
-          <a href="/contact" className="hover:text-white transition-colors">Contato</a>
-          <a href="#" className="hover:text-white transition-colors">Publique com a ACSL</a>
+          <a href="#" className="hover:text-white transition-colors">
+            Início
+          </a>
+          <a href="/about-us" className="hover:text-white transition-colors">
+            Sobre nós
+          </a>
+          <a href="/contact" className="hover:text-white transition-colors">
+            Contato
+          </a>
+          <a href="#" className="hover:text-white transition-colors">
+            Publique com a ACSL
+          </a>
         </div>
 
         {/* Coluna 3: contato */}
@@ -42,6 +51,14 @@ export function Footer() {
             contato@acsleditora.com.br
           </a>
           <span>Rio de Janeiro · RJ</span>
+        </div>
+      </div>
+      <div className="border-t border-white/10">
+        <div className="max-w-[1240px] mx-auto px-11 py-4 flex flex-col sm:flex-row justify-between items-center gap-2">
+          <span className="font-mono text-[11px] text-muted-faint">
+            © {new Date().getFullYear()} ACSL Editora
+          </span>
+          <VisitCounter />
         </div>
       </div>
     </footer>

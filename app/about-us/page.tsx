@@ -1,85 +1,91 @@
-import { Footer } from "@/public/components/footer";
-import Header from "@/public/components/header";
-
 export default function AboutUs() {
   return (
     <main>
-      <Header />
-      <section className="w-full px-4 pt-16 pb-12">
-        <div className="max-w-[720px] mx-auto text-center">
-          <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-gold-deep mb-4">
-            Quem somos
-          </p>
-          <h1 className="font-sans text-[34px] md:text-[44px] leading-[1.1] font-bold tracking-[-0.02em] text-ink mb-6">
-            Desenvolver o melhor conteúdo multidisciplinar não é só uma missão é
-            nossa razão de existir.
-          </h1>
-          <p className="font-serif text-xl leading-[1.55] text-muted">
-            Queremos ser reconhecidos como uma empresa comprometida com a
-            comunicação e áreas afins, pela prestação de serviços com elevado
-            padrão ético e de qualidade.
-          </p>
-        </div>
-      </section>
+      <section className="w-full px-4 py-16 bg-cream">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start ">
+          {/* Coluna 1 — Sobre a ACSL Editora */}
+          <div>
+            <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-gold-deep mb-4">
+              Desde 2006
+            </p>
+            <h1 className="font-sans text-[30px] md:text-[36px] leading-[1.15] font-bold tracking-[-0.02em] text-ink mb-6">
+              Transformamos dados complexos em narrativas que inspiram.
+            </h1>
 
-      {/* Valores institucionais */}
-      <section className="w-full px-4 py-12 bg-cream">
-        <div className="max-w-[1000px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white border border-border rounded-[2px] p-6">
-            <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-gold-deep mb-3">
-              Valor 01
-            </p>
-            <h3 className="font-sans text-xl font-bold text-ink mb-2">Ética</h3>
-            <p className="font-serif text-[15px] leading-[1.5] text-muted">
-              A ética é o pano de fundo de cada decisão, das grandes campanhas
-              às escolhas do dia a dia.
-            </p>
+            <div className="font-serif text-base leading-[1.7] text-muted flex flex-col gap-4">
+              <p>
+                A ACSL Editora nasceu em 2006 com o objetivo de oferecer ao
+                mercado editorial brasileiro uma linha de publicações
+                institucionais à frente do seu tempo, antenada com as novas
+                tecnologias.
+              </p>
+              <p>
+                Ao longo de duas décadas, foram muitas as contribuições para a
+                consolidação de uma comunicação corporativa e institucional de
+                alto impacto. Desde os primeiros passos, a editora soube
+                acompanhar a transição do papel para as plataformas digitais,
+                transformando dados complexos e relatórios institucionais em
+                narrativas atraentes, informativas e com grande valor estético.
+                A empresa consolidou-se como uma parceira estratégica de grandes
+                organizações, cooperativas e marcas que buscam registrar sua
+                história e fortalecer seu posicionamento no mercado através de
+                conteúdos rigorosamente apurados e de excelência editorial.
+              </p>
+              <p>
+                Com essa sólida bagagem, a ACSL Editora posiciona-se como a
+                parceira ideal para instituições, organizações empresariais e
+                entidades associativas que desejam produzir periódicos de alto
+                nível ou eternizar momentos marcantes de suas trajetórias. Seja
+                para celebrar aniversários corporativos, registrar marcos
+                históricos ou fortalecer a comunicação com seus públicos,
+                transformamos o legado de cada organização em publicações
+                memoráveis, unindo tradição editorial, inovação tecnológica e o
+                compromisso de contar histórias que inspiram o futuro.
+              </p>
+            </div>
           </div>
 
-          <div className="bg-white border border-border rounded-[2px] p-6">
-            <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-gold-deep mb-3">
-              Valor 02
+          {/* Coluna 2 — Revista Brasil em Foco, em destaque num card verde */}
+          <div className="bg-forest text-cream rounded-[4px] p-8 md:p-10">
+            <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-gold-mid mb-4">
+              Nosso carro-chefe
             </p>
-            <h3 className="font-sans text-xl font-bold text-ink mb-2">
-              Apartidária
-            </h3>
-            <p className="font-serif text-[15px] leading-[1.5] text-muted">
-              Somos uma empresa apartidária, sem envolvimento em atividades
-              político-partidárias.
-            </p>
-          </div>
+            <h2 className="font-sans text-[26px] md:text-[30px] leading-[1.2] font-bold tracking-[-0.02em] text-cream mb-6">
+              Revelar o Brasil que dá certo.
+            </h2>
 
-          <div className="bg-white border border-border rounded-[2px] p-6">
-            <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-gold-deep mb-3">
-              Valor 03
-            </p>
-            <h3 className="font-sans text-xl font-bold text-ink mb-2">
-              Mérito
-            </h3>
-            <p className="font-serif text-[15px] leading-[1.5] text-muted">
-              Valorizamos a diferenciação pelo mérito, reconhecendo quem entrega
-              excelência de verdade.
-            </p>
+            <div className="font-serif text-base leading-[1.7] text-cream/85 flex flex-col gap-4">
+              <p>
+                Essa é a proposta da Revista Brasil em Foco. Mais do que um
+                veículo de comunicação, somos um ecossistema dedicado a dar voz
+                e visibilidade aos brasileiros que fazem a diferença e às ações
+                que fortalecem o desenvolvimento do país, inspirando novas
+                conquistas. Com circulação nacional em formatos digital e
+                impresso, cruzamos fronteiras para mapear e compartilhar
+                histórias de sucesso que impulsionam o progresso nas áreas de
+                economia, agronegócio, cooperativismo, saúde, qualidade de vida,
+                tecnologia, ciência, empreendedorismo, sustentabilidade e
+                literatura.
+              </p>
+              <p>
+                Acreditamos no poder transformador da palavra bem apurada e do
+                jornalismo de excelência. Nossa equipe multidisciplinar de
+                jornalistas, analistas e fotógrafos trabalha com rigor técnico e
+                sensibilidade para entregar, a cada edição, grandes reportagens,
+                entrevistas exclusivas com lideranças expressivas e análises
+                aprofundadas sobre o cenário de negócios, agroindústria e
+                desenvolvimento socioeconômico.
+              </p>
+              <p>
+                Seja na folha de papel ou na tela do dispositivo digital, a
+                Revista Brasil em Foco conecta você ao melhor do potencial
+                brasileiro, conectando passado, presente e futuro em páginas que
+                inspiram transformação.
+              </p>
+            </div>
           </div>
         </div>
       </section>
-
-      {/* Compromisso com a ética — resumo, não o documento jurídico inteiro */}
-      <section className="w-full px-4 py-16">
-        <div className="max-w-[720px] mx-auto border-l-[3px] border-gold pl-6">
-          <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-gold-deep mb-3">
-            Compromisso institucional
-          </p>
-          <p className="font-serif text-lg leading-[1.6] text-ink">
-            Conduzimos nossos negócios sob um Código de Ética e Conduta e uma
-            Política Anticorrupção formais, que orientam nosso relacionamento
-            com clientes, parceiros, fornecedores e o poder público — sempre com
-            transparência, integridade e repúdio a qualquer prática de corrupção
-            ou suborno.
-          </p>
-        </div>
-      </section>
-      <Footer />
     </main>
   );
 }
