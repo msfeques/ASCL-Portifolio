@@ -1,14 +1,3 @@
-### Dia 8 (Quarta) — Sobre Nós (estrutura)
-- [ ] Manifesto curto (H2 — 34px/1.1, peso 700)
-- [ ] Coluna única de texto serif com foto ao lado (max-width 62ch)
-- [ ] Bloco de linha do tempo (história da ACSL)
-
-## Semana 3 — Funcionalidade, navegação, responsividade e deploy
-
-### Dia 11 (Segunda) — Contato funcional
-- [ ] Integrar envio (Resend, EmailJS ou API Route própria)
-- [ ] Validação de campos obrigatórios
-- [ ] Teste real de envio e recebimento do e-mail
 
 ### Dia 14 (Quinta) — Revisão geral e SEO
 - [ ] Meta tags (title, description) nas 3 páginas

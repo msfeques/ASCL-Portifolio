@@ -11,6 +11,7 @@ interface Errors {
   email?: string;
   mensagem?: string;
   consentimento?: string;
+  envio?: string;
 }
 
 const MOTIVOS: { value: Motivo; label: string }[] = [
@@ -21,7 +22,6 @@ const MOTIVOS: { value: Motivo; label: string }[] = [
 
 const MENSAGEM_MAX = 1200;
 
-// Classes reaproveitadas (evita repetir a mesma string gigante em cada input)
 const LABEL =
   "block mb-2 font-mono text-[11px] tracking-[0.14em] uppercase text-muted-light";
 const INPUT_BASE =
@@ -73,9 +73,31 @@ export default function Publish() {
     if (Object.keys(novosErros).length > 0) return;
 
     setStatus("enviando");
-    // TODO (Dia 11): integrar envio real (Resend/EmailJS/API Route)
-    await new Promise((r) => setTimeout(r, 900));
-    setStatus("enviado");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          motivo,
+          nome,
+          organizacao,
+          email,
+          telefone,
+          publicacao,
+          mensagem,
+        }),
+      });
+
+      if (!res.ok) throw new Error("Falha no envio");
+
+      setStatus("enviado");
+    } catch (err) {
+      setStatus("idle");
+      setErrors({
+        envio: "Não foi possível enviar agora. Tente novamente em instantes.",
+      });
+    }
   }
 
   if (status === "enviado") {
@@ -243,13 +265,14 @@ export default function Publish() {
             </span>
           </label>
           {errors.consentimento && <p className={ERROR_TEXT}>{errors.consentimento}</p>}
+          {errors.envio && <p className={ERROR_TEXT}>{errors.envio}</p>}
 
           <div className="flex items-center gap-4 flex-wrap">
             <Button variant="primary" type="submit" disabled={status === "enviando"}>
               {status === "enviando" ? "Enviando..." : "Enviar mensagem"}
             </Button>
             <span className="font-mono text-[11px] text-muted-light">
-              Resposta em até 2 dias úteis
+              Resposta em breve no e-mail informado. Obrigado pelo contato!
             </span>
           </div>
         </form>
