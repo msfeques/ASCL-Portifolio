@@ -17,8 +17,8 @@ export async function POST(request: Request) {
 
     await resend.emails.send({
       // "from" precisa ser um endereço do domínio verificado no passo 2
-      from: "Site ACSL <onboarding@resend.dev>",
-      to: "projetoagencymagazines@gmail.com", // e-mail que vai receber as mensagens
+      from: "Site ACSL <contato@revistabrasilemfoco.com.br>",
+      to: "contato@acsleditora.com.br", // e-mail que vai receber as mensagens
       replyTo: email, // clicar em "responder" já vai direto pro visitante
       subject: `Novo contato pelo site — ${motivo}`,
       text: `
