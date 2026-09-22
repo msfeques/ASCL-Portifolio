@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Button from "./button";
-import { magazines } from "../data/magazines";
+import Button from "@/public/components/button";
+import { magazines } from "@/public/data/magazines";
 
 export default function Hero() {
   // Ordena por data (mais recente primeiro) — a "edição atual" é sempre
@@ -12,8 +12,8 @@ export default function Hero() {
   const atras = resto.slice(0, 2); // até 2 capas espiando atrás
 
   return (
-    <section className="w-full px-4 pt-16 pb-20">
-      <div className="max-w-310 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="w-full px-4 pt-16 pb-20 overflow-hidden">
+      <div className="max-w-[1240px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Texto */}
         <div>
           <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-gold-deep mb-4">
@@ -25,8 +25,8 @@ export default function Hero() {
           </h1>
 
           <p className="font-serif text-xl leading-[1.55] text-muted max-w-[46ch] mb-8">
-            A ACSL publica revistas institucionais e técnicas, do agronegócio
-            à gestão pública, pra quem quer ler de verdade, não só rolar a tela.
+            A ACSL publica revistas institucionais e técnicas — do agronegócio
+            à gestão pública — pra quem quer ler de verdade, não só rolar a tela.
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -43,25 +43,25 @@ export default function Hero() {
 
         {/* Pilha de capas */}
         {atual && (
-          <div className="relative w-full max-w-95 mx-auto aspect-3/4">
+          <div className="relative w-full max-w-[380px] mx-auto aspect-[3/4]">
             {/* Capas de trás — espiando, só pra dar noção de acervo */}
             {atras[1] && (
-              <div className="absolute inset-0 rotate-[8deg] translate-x-6 translate-y-3 opacity-60">
+              <div className="absolute inset-0 rotate-[4deg] translate-x-3 translate-y-2 sm:rotate-[8deg] sm:translate-x-6 sm:translate-y-3 opacity-60">
                 <Image
                   src={atras[1].coverImage}
                   alt=""
                   fill
-                  className="object-cover rounded-xs shadow-[0_16px_40px_rgba(0,0,0,0.3)]"
+                  className="object-cover rounded-[2px] shadow-[0_16px_40px_rgba(0,0,0,0.3)]"
                 />
               </div>
             )}
             {atras[0] && (
-              <div className="absolute inset-0 -rotate-6 -translate-x-4 translate-y-2 opacity-80">
+              <div className="absolute inset-0 rotate-[-3deg] -translate-x-2 translate-y-1 sm:rotate-[-6deg] sm:-translate-x-4 sm:translate-y-2 opacity-80">
                 <Image
                   src={atras[0].coverImage}
                   alt=""
                   fill
-                  className="object-cover rounded-xs shadow-[0_18px_44px_rgba(0,0,0,0.35)]"
+                  className="object-cover rounded-[2px] shadow-[0_18px_44px_rgba(0,0,0,0.35)]"
                 />
               </div>
             )}
@@ -73,7 +73,7 @@ export default function Hero() {
                 alt={`Capa da edição atual: ${atual.title}`}
                 fill
                 priority
-                className="object-cover rounded-xs shadow-[0_24px_60px_rgba(0,0,0,0.45)]"
+                className="object-cover rounded-[2px] shadow-[0_24px_60px_rgba(0,0,0,0.45)]"
                 sizes="(max-width: 1024px) 80vw, 380px"
               />
             </div>
