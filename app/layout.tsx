@@ -5,7 +5,7 @@ import { Footer } from "@/public/components/footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ASCL EDITORA",
+  title: "ACSL EDITORA",
 };
 
 export default function RootLayout({
