@@ -34,8 +34,11 @@ export function Footer() {
           <a href="/contact" className="hover:text-white transition-colors">
             Contato
           </a>
-          <a href="#" className="hover:text-white transition-colors">
-            Publique com a ACSL
+          <a href="/contact" className="hover:text-white transition-colors">
+            Contato
+          </a>
+          <a href="/companyPolicy" className="hover:text-white transition-colors">
+            Política de Privacidade
           </a>
         </div>
 
