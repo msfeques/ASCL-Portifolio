@@ -1,5 +1,6 @@
 import AcervoGrid from "@/public/components/acervoGrid";
 import Hero from "@/public/components/hero";
+import PartnersMarquee from "@/public/components/PartnersMarquee";
 import VisitCounter from "@/public/components/visitCounter"; // ajuste o caminho conforme seu projeto
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
             </div>
             <Hero />
             <AcervoGrid />
+            <PartnersMarquee />
           </main>
         </div>
       </main>
